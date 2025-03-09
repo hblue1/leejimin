@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500&display=swap');
+body{font-family: 'Noto Sans KR', sans-serif;}
+ul{list-style: none;padding:0;}
+h2{font-size: 30px;}
+img{vertical-align: top;}
+.wrap{width:100%;margin:0 auto;}
+.sm{background-color:#6182ab;width:100%;font-size: 17px;line-height: 1.4;padding:10px;font-weight: 300;display: flex;align-items: center;}
+.sm section{width:22%;padding:17px 0;}
+.h2{padding:40px 10px;text-align: center;background-color:#F4F4F4;box-sizing: border-box;}
+.sm p{margin:0;}
+.h2 h2{font-size: 45px;margin:0;}
+.sm h2{margin:0;font-size: 22px;font-weight: 400;}
+.sm1{font-weight: 400;}
+.kG{display: flex;margin:0;}
+.kG li{margin-right: 3%;font-size: 18px;}
+.butG{display:flex;text-align: center;}
+.sm1>h2{margin-bottom: 20px;margin-top:-20px;}
+.sm2 h2,.sm3 h2,.sm4 h2{margin-bottom:10px;margin-top:-10px;}
+.but1{background-color:#fff;color:#000;width:20%;height:40px;line-height: 40px;margin-right:3%}
+.but2{background-color:#dee4ea;color:#000;width:20%;height:40px;line-height: 40px;margin-right:3%}
+.but3{background-color:#1c3860;color:#fff;width:20%;height:40px;line-height: 40px;}
+
+.top{background-image: url(../../img/event/pc.jpg);width:100%;height:3018px;background-size: cover;background-repeat:no-repeat;}
+.mid{width:100%;height: 2502px;background-color:#F4F4F4;display: flex;justify-content: center;}
+.mid2{background:url(../../img/event/mobile.jpg);width:375px;height:1927px;margin-right: 10%;margin-left:8%;}
+.mid3{background:url(../../img/event/tb.jpg);width:512px;height: 2502px;}
