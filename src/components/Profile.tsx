@@ -21,7 +21,7 @@ const SKILLS = [
   "Godo platform",
 ];
 
-const EXPERIENCE = ["Youngjin EL", "Pine innovation", "Barog clinic"];
+const EXPERIENCE = ["Youngjin EL", "Pine innovation", "Barog clinic", "idClinic"];
 
 /** 프로필 3단 (기존 .pf — Profile / Skills / Work experience) */
 export function Profile() {
