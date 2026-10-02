@@ -50,7 +50,7 @@
 /* 기존 div+ul 로 그리던 표를 의미에 맞게 table 로 */
 .table {
   width: 100%;
-  max-width: 500px;
+  max-width: 760px;
   margin-bottom: 40px;
   border-collapse: collapse;
   background: #fff;
@@ -66,7 +66,26 @@
 
 .table th[scope="row"],
 .table td:first-child {
-  width: 40%;
+  width: 32%;
+}
+
+.table thead th {
+  background: #e8edf4;
+}
+
+.code {
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #e3e6ea;
+  font-family: Consolas, "SFMono-Regular", Menlo, monospace;
+  font-size: 0.86em;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+
+.mid .table {
+  margin-top: 8px;
+  margin-bottom: 16px;
 }
 
 .mid {
@@ -86,6 +105,14 @@
 
 .numbered ul {
   padding-left: 2%;
+}
+
+.numbered > li {
+  margin-bottom: 6px;
+}
+
+.numbered ul li::before {
+  content: "- ";
 }
 
 @media (max-width: 750px) {

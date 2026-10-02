@@ -10,9 +10,14 @@ import workArt from "@/assets/img/stu3.webp";
 
 const SKILLS = [
   "Photoshop & Illustrator",
+  "Figma",
   "HTML5 & CSS3",
-  "Javascript",
+  "JavaScript · TypeScript",
+  "React",
+  "Next.js",
+  "Tailwind CSS",
   "jQuery",
+  "Git · GitHub",
   "Godo platform",
 ];
 
