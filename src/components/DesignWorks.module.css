@@ -1,0 +1,117 @@
+.bot1 {
+  width: 100%;
+  max-width: 56.5%;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0.83em 0;
+  font-family: var(--font-roboto), sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.groupTitle {
+  margin: 1em 0;
+  font-family: "S-CoreDream-3Light", var(--font-noto), sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.grid li {
+  width: 33%;
+  margin: 0 0.5% 0.5% 0;
+}
+
+.grid li:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+/* 3. 전단지·DID — 세로/가로 비율이 섞여 개별 폭 */
+.did li {
+  width: 34.8%;
+  margin-right: 1%;
+}
+
+.did li:nth-of-type(1) {
+  width: 28.2%;
+}
+
+/* 4. 시트지·제휴쿠폰 */
+.pa li:nth-of-type(1) {
+  width: 46%;
+  margin-right: 1.5%;
+}
+
+.pa li:nth-of-type(2) {
+  width: 52%;
+  padding-top: 1%;
+  margin-right: 0;
+}
+
+/* 5. 해외 마케팅 */
+.om {
+  flex-wrap: nowrap;
+}
+
+.om li {
+  width: 36.4%;
+}
+
+.om li:nth-of-type(3) {
+  width: 25.8%;
+  margin-right: 0;
+}
+
+@media (max-width: 1280px) {
+  .bot1 {
+    max-width: 72%;
+  }
+}
+
+@media (max-width: 750px) {
+  .bot1 {
+    max-width: 84%;
+  }
+  .title {
+    font-size: 34px;
+  }
+  .groupTitle {
+    font-size: 19px;
+  }
+  /* 기본 그룹은 2열로 */
+  .default li {
+    width: 49.5%;
+    margin: 0 1% 1% 0;
+  }
+  .default li:nth-of-type(3n) {
+    margin-right: 1%;
+  }
+  .default li:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .pa {
+    flex-direction: column;
+  }
+  .pa li:nth-of-type(1),
+  .pa li:nth-of-type(2) {
+    width: 100%;
+    margin: 0 0 8px;
+    padding-top: 0;
+  }
+}

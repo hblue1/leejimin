@@ -1,0 +1,91 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
+body::-webkit-scrollbar { display:none; }
+body,html{height: 100%}
+body{font-family: 'Noto Sans KR', sans-serif;}
+h1{margin:0;}
+h2{margin:0;}
+h3{margin:0;}
+p{margin:0;}
+ul{list-style: none;padding:0;margin:0;}
+a{text-decoration: none;color:#fff;display:block;}
+.wrap{width:100%;}
+header{width:100%;position: fixed;top:0;height:125px;display: flex;justify-content: center;z-index: 99999;}
+header .hnav{width:90%;height:100%;display: flex;justify-content:center;position: relative;border-bottom: 1px solid #b1aaa7;line-height: 125px;}
+header .hnav:hover{background-color: #000;border-bottom:none;}
+header:hover{background-color: #000;}
+header h1{position:absolute;left: 0;top:15%;}
+header .gnb{display: flex;width:50%;box-sizing: border-box;}
+header .gnb li{justify-content: center;width:25%;}
+header .gnb li a{height: 100%;width:100%;font-size: 18px;text-align: center;position: relative;}
+.select:after{content:"";height:2px;background-color: yellow;position: absolute;bottom:0;left:0;animation:aho .3s forwards;}
+header .gnb li a:hover{color:yellow;}
+.hn1{position: absolute;right:5px;}
+.hn1 a img{position:absolute;top:50px;left:-25px;}
+@keyframes aho{
+	from{width:0;}
+	to{width:100%;}
+}
+header .gnb li a:after{content:"";width:100%;}
+header .gnb>div a{position: absolute;right:0;}
+header .gnb>div a img{margin-right: 10px;margin-bottom: -4px;}
+header .gnb>div a{cursor: default;}
+/*top*/
+.top{background:url(../../img/jQuery/bg1.jpg) no-repeat;background-size:cover;width:100%;height: 969px;display: flex;justify-content: center;align-items: center;flex-direction: column;position: relative;overflow: hidden;}
+.top h2{text-align: center;padding:20px 30px;color:#fff;font-weight: bold;font-size: 48px;opacity:0;margin-top:-100px;font-family: 'Playfair Display', serif;line-height: 1.4;}
+.top .scl{position: absolute;bottom: 0;display: flex;flex-direction: column;align-items: center;
+animation-name:bou;animation-duration:.4s;
+animation-timing-function:linear;
+animation-iteration-count:infinite;
+animation-direction: alternate;}
+@keyframes bou{
+	from{margin-bottom: -5px;opacity:1;}
+	to{margin-bottom: -15px;opacity: .5;}
+}
+.top .scl span:nth-of-type(1){color:#fff;font-size: 10px;padding-bottom: 10px;}
+/*mid*/
+.mid{background:url(../../img/jQuery/bg2.jpg) no-repeat;background-size:cover;width:100%;height: 969px;position: relative;box-sizing: border-box;background-position:100%}
+.mid .midbox{display: flex;justify-content: center;flex-direction:column;align-items: center;background-position:100%;width:100%;height:100%;
+position: absolute;top:-100px;}
+.mid .midbox .box1{text-align: center;opacity:0;}
+.mid .box1 p{font-size: 15px;margin-top:10px;margin-bottom: 60px;color:#fff;}
+.mid h2{margin-top:10px;margin-bottom: 55px;line-height: 1.5;font-size: 50px;text-align: center;color:white;font-weight: 100;opacity: 0;}
+.mid h2 span{font-weight: 700;}
+.mid .midbox>p{font-size: 22px;color:#fff;margin-bottom: 60px;opacity:0;}
+.mid a{width:200px;height: 60px;line-height:60px;text-align: center;background-color: #2f60ec;opacity: 0;}
+.mid a:hover{background-color: #fff;color:#000;transition: .5s;}
+/*mid2*/
+.mid2{background:url(../../img/jQuery/bg3.jpg) no-repeat;background-size:cover;width:100%;height: 969px;position: relative;box-sizing: border-box;background-position:100%;}
+.mid2 .midbox2{display: flex;justify-content: center;flex-direction:column;align-items: center;width:100%;height: 100%;position: absolute;top:-100px;}
+.mid2 .midbox2 .box2{text-align: center;opacity: 0}
+.mid2 .box2 p{font-size: 15px;margin-top:10px;margin-bottom: 60px;color:#fff;}
+.mid2 h2{margin-top:10px;margin-bottom: 55px;line-height: 1.5;font-size: 50px;text-align: center;color:white;font-weight: 100;opacity: 0;}
+.mid2 h2 span{font-weight: 700;}
+.mid2 .midbox2>p{font-size: 22px;color:#fff;margin-bottom: 60px;opacity:0;}
+.mid2 a{width:200px;height: 60px;line-height:60px;text-align: center;background-color: #2f60ec;opacity:0}
+.mid2 a:hover{background-color: #fff;color:#000;transition: .5s;}
+/*bot*/
+.bot{background:url(../../img/jQuery/bg4.jpg) no-repeat;background-size:cover;width:100%;height: 969px;position: relative;background-position:100%;}
+.botbox{display: flex;justify-content: center;flex-direction:column;align-items: center;width:100%;height:100%;position: absolute;top:-100px;}
+.bot h2{margin-top:20px;margin-bottom: 50px;font-size: 48px;color:#fff;font-weight: 400;opacity: 0;}
+.bot .botcon{display: flex;width:62.5%;justify-content: center;align-items: center;opacity: 0;}
+.botcon section{width:33.333%;padding:30px 45px;box-sizing: border-box;}
+.wrap .botcon section ul{list-style: disc;}
+.botcon section h3{font-size: 24px;margin-bottom: 30px;display: flex;justify-content: space-between;font-weight: 400;}
+.botcon section li{display: flex;justify-content: space-between;line-height: 1.6;}
+.botcon section li a{font-size: 16px;width:60%;color:#000;overflow: hidden;white-space: nowrap;display: block;text-overflow:ellipsis;}
+.botcon section li span{font-size: 15px;}
+.botcon .s1{background-color: #F2F2F2;}
+.botcon .s2{background-color: #000;color:#fff;}
+.botcon .s2 a{color:#fff;}
+.botcon .s3{background-color: #F2F2F2;}
+/*footer*/
+footer{background-color: #131414;color:#fff;display: flex;flex-direction: column;justify-content: center;align-items: center;position: relative;padding:40px 0;}
+footer>a:nth-of-type(1){margin-bottom: 30px;margin-top:20px;}
+footer div{width:50px;height: 50px;border-radius: 50%;outline: none;border:0;font-size: 12px;text-align: center;line-height: 50px;background-color: #fff;color:#000;position: absolute;top:-25px;left:49%;}
+footer div a{display: block;color:#000;}
+footer button:hover{color:#fff;background-color: #2f60ec;cursor: pointer;}
+footer ul{display: flex;width:21.5%;margin:0 auto;margin-bottom: 10px;}
+footer ul li{margin-right: 2%;}
+footer p:nth-of-type(1){margin-bottom: 10px;}

@@ -1,0 +1,53 @@
+.la {
+  margin-top: 180px;
+  font-family: var(--font-nanum), sans-serif;
+  text-align: center;
+}
+
+.titleWrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 62px;
+}
+
+/* 제목 뒤 회색 바 */
+.mx {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  width: 168.5px;
+  height: 25px;
+  transform: translateX(-50%);
+}
+
+.title {
+  position: relative;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.text {
+  margin-bottom: 218px;
+  color: #c3c3c3;
+  font-size: 18.5px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 750px) {
+  .la {
+    margin-top: 120px;
+  }
+  .title {
+    font-size: 38px;
+  }
+  .mx {
+    top: 22px;
+    width: 130px;
+    height: 20px;
+  }
+  .text {
+    margin-bottom: 140px;
+    padding: 0 8%;
+    font-size: 15px;
+  }
+}

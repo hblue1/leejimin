@@ -1,0 +1,108 @@
+.page {
+  font-family: var(--font-noto), sans-serif;
+  font-size: 18px;
+  padding-bottom: 40px;
+}
+
+.header,
+.wrap {
+  width: 83.333333%;
+  margin: 0 auto;
+  padding-left: 8%;
+  padding-right: 4%;
+}
+
+.header {
+  height: 100px;
+  background-color: #6182ab;
+  line-height: 100px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.wrap {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: #f4f4f4;
+}
+
+.wrap h2 {
+  margin: 30px 0 16px;
+  font-size: 24px;
+}
+
+.wrap h2.first {
+  margin-top: 50px;
+}
+
+.wrap h3 {
+  margin: 24px 0 12px;
+  font-size: 20px;
+}
+
+.lead {
+  margin-bottom: 40px;
+}
+
+/* 기존 div+ul 로 그리던 표를 의미에 맞게 table 로 */
+.table {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.table th,
+.table td {
+  padding: 5px;
+  border: 1px solid #000;
+  text-align: left;
+  font-weight: 500;
+}
+
+.table th[scope="row"],
+.table td:first-child {
+  width: 40%;
+}
+
+.mid {
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.numbered {
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+
+.numbered ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+.numbered ul {
+  padding-left: 2%;
+}
+
+@media (max-width: 750px) {
+  .page {
+    font-size: 16px;
+  }
+  .header,
+  .wrap {
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .header {
+    height: 72px;
+    line-height: 72px;
+  }
+  .header h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,13 @@
+@charset "utf-8";
+@font-face{
+	font-family:'Spoqa Han Sans R';
+	src:url('Spoqa Han Sans Regular.woff2') format('woff2'),
+	url('Spoqa Han Sans Regular.woff') format('woff');
+	
+}
+@font-face{
+	font-family:'Spoqa Han Sans l';
+	src:url('Spoqa Han Sans Light.woff2') format('woff2'),
+	url('Spoqa Han Sans Light.woff') format('woff');
+	
+}

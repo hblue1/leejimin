@@ -1,0 +1,8 @@
+.footer {
+  height: 112px;
+  border-top: 1px solid #ddd;
+  font-family: var(--font-nanum), sans-serif;
+  font-size: 13px;
+  line-height: 112px;
+  text-align: center;
+}
