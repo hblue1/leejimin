@@ -59,17 +59,23 @@
 }
 
 /* ── 작업물 카드 (기존 .s1 / .s2) ── */
+/* 모든 행 동일 간격 (기존 .s1 기준: 오른쪽 카드가 84px 내려온 엇갈림 배치) */
 .row {
   display: flex;
   align-items: flex-start;
   width: 57%;
+  height: 410px;
   margin: 0 auto;
 }
 
-/* 1행 (기존 .s1: flex 세로 중앙정렬 → 오른쪽 카드가 84px 내려옴) */
-.row1 {
-  height: 410px;
+.rowFirst {
   margin-top: 40px;
+}
+
+/* 마지막 행 아래 — 다음 섹션(Design)과의 간격 */
+.rowLast {
+  height: auto;
+  margin-bottom: 109px;
 }
 
 .w1 {
@@ -80,17 +86,6 @@
 .w2 {
   width: 47.16%;
   margin-top: 84px;
-}
-
-/* 2행 (기존 .s2: float → 오른쪽 카드가 168px 내려옴) */
-.d1 {
-  width: 47.16%;
-  margin: 0 2.92% 109px 0;
-}
-
-.d2 {
-  width: 47.16%;
-  margin: 168px 0 109px;
 }
 
 .card {
@@ -183,15 +178,15 @@
   .card {
     height: 220px;
   }
-  .row1 {
+  .row {
     height: auto;
     margin-bottom: 40px;
   }
   .w2 {
     margin-top: 60px;
   }
-  .d2 {
-    margin-top: 110px;
+  .rowLast {
+    margin-bottom: 80px;
   }
   .label {
     font-size: 30px;
@@ -203,13 +198,14 @@
     flex-direction: column;
     width: 84%;
   }
-  .row1 {
+  .row {
     margin-bottom: 0;
   }
+  .rowLast {
+    margin-bottom: 56px;
+  }
   .w1,
-  .w2,
-  .d1,
-  .d2 {
+  .w2 {
     width: 100%;
     margin: 0 0 24px;
   }

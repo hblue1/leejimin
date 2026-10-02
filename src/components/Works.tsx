@@ -7,8 +7,11 @@ import filament from "@/assets/img/filament.png";
 import yjel from "@/assets/img/yjel.png";
 import lamp from "@/assets/img/lamp.png";
 import jqueryLogo from "@/assets/img/jquery-logo.png";
+import idclinicLogo from "@/assets/img/idclinic-logo.svg";
+import idclinicGlobalLogo from "@/assets/img/idclinic-global-logo.svg";
 
 type Work = {
+  /** 호버 시 보이는 문구 */
   label: string;
   href: string;
   logo: StaticImageData;
@@ -16,8 +19,12 @@ type Work = {
   logoWidth: string;
 };
 
-/** 기존 .s1 / .s2 의 카드 4개 (2개씩 엇갈림 배치) */
+/** 작업물 카드 — 2개씩 엇갈림 배치. 카드 번호(Project N)는 순서대로 자동 부여 */
 const ROWS: Work[][] = [
+  [
+    { label: "React", href: "https://idclinic-jm.vercel.app/", logo: idclinicLogo, alt: "id Clinic 리뉴얼 사이트", logoWidth: "42%" },
+    { label: "React", href: "https://old-idclinic-jm.vercel.app/", logo: idclinicGlobalLogo, alt: "id Clinic 글로벌 사이트", logoWidth: "48%" },
+  ],
   [
     { label: "godo1", href: "http://filamentkorea.com/", logo: filament, alt: "필라멘트", logoWidth: "55%" },
     { label: "godo2", href: "http://yjinel.com/", logo: yjel, alt: "영진이엘", logoWidth: "70%" },
@@ -30,10 +37,12 @@ const ROWS: Work[][] = [
 
 function WorkCard({
   work,
+  no,
   side,
   className,
 }: {
   work: Work;
+  no: number;
   side: "left" | "right";
   className: string;
 }) {
@@ -50,10 +59,10 @@ function WorkCard({
         href={work.href}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`${work.alt} (새 창)`}
+        aria-label={`Project ${no} - ${work.alt} (새 창)`}
       >
         <span className={styles.click} aria-hidden="true">
-          Click !
+          Project {no}
         </span>
         <Image
           src={work.logo}
@@ -86,11 +95,23 @@ export function Works() {
       {ROWS.map((row, i) => (
         <section
           key={i}
-          className={`${styles.row} ${i === 0 ? styles.row1 : styles.row2}`}
+          className={`${styles.row} ${i === 0 ? styles.rowFirst : ""} ${
+            i === ROWS.length - 1 ? styles.rowLast : ""
+          }`}
           aria-label={`작업물 ${i + 1}`}
         >
-          <WorkCard work={row[0]} side="left" className={i === 0 ? styles.w1 : styles.d1} />
-          <WorkCard work={row[1]} side="right" className={i === 0 ? styles.w2 : styles.d2} />
+          <WorkCard
+            work={row[0]}
+            no={i * 2 + 1}
+            side="left"
+            className={styles.w1}
+          />
+          <WorkCard
+            work={row[1]}
+            no={i * 2 + 2}
+            side="right"
+            className={styles.w2}
+          />
         </section>
       ))}
     </>
