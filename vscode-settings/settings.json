@@ -1,0 +1,77 @@
+{
+  "tabnine.experimentalAutoImports": true,
+
+  // ── 입력/제안(전역 최소화) ─────────────────────────────
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
+  "editor.inlineSuggest.enabled": false,
+  "editor.wordBasedSuggestions": "off",
+
+  // ── 포맷/기타 ────────────────────────────────────────
+  "[html]": { "editor.defaultFormatter": "vscode.html-language-features" },
+  "git.autofetch": true,
+  "remote.SSH.experimental.chat": false,
+  "remote.SSH.experimental.enhancedSessionLogs": false,
+  "editor.codeActionsOnSave": {},
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.settings.useSplitJSON": true,
+  "git.enableSmartCommit": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.eol": "\n",
+
+  // ── Emmet (CSS 약어 Tab 확장) ─────────────────────────
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "editor.tabCompletion": "on",
+  "emmet.includeLanguages": {
+    "postcss": "css",
+    "pcss": "css", // ✅ 추가: .pcss도 Emmet 지원
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
+    "javascriptreact": "html",
+    "typescriptreact": "html"
+  },
+  "emmet.preferences": { "css.unit": "px" },
+
+  // ── CSS/SCSS/PostCSS에서만 제안 켜기 ─────────────────
+  "[css]": {
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    }
+  },
+  "[scss]": {
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    }
+  },
+  "[postcss]": {
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    }
+  },
+
+  // ── ✅ 추가: PostCSS 인식 & CSS 경고 숨김 ──────────────
+  "files.associations": {
+    "**/globals.css": "postcss", // globals.css를 PostCSS로 인식
+    "**/*.pcss": "postcss" // .pcss 전역 인식(선택)
+  },
+  "css.validate": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "claudeCode.hideOnboarding": true // 기본 CSS 검증 경고 숨김(선택)
+}
